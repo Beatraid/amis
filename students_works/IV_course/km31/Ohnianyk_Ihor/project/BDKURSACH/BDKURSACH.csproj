@@ -1,0 +1,187 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8AC57FCE-F1AD-404C-9073-14722962CF04}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BDKURSACH</RootNamespace>
+    <AssemblyName>BDKURSACH</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Oracle.ManagedDataAccess">
+      <HintPath>..\packages\Oracle.ManagedDataAccess.12.1.24160719\lib\net40\Oracle.ManagedDataAccess.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DataBase.cs" />
+    <Compile Include="Faculty.cs" />
+    <Compile Include="Faculty_REP.cs" />
+    <Compile Include="Form_add_subject.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_add_subject.Designer.cs">
+      <DependentUpon>Form_add_subject.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_admin_add.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_admin_add.Designer.cs">
+      <DependentUpon>Form_admin_add.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_admin_edit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_admin_edit.Designer.cs">
+      <DependentUpon>Form_admin_edit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_authorization.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_authorization.Designer.cs">
+      <DependentUpon>Form_authorization.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_admin_choice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_admin_choice.Designer.cs">
+      <DependentUpon>Form_admin_choice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_mark.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_mark.Designer.cs">
+      <DependentUpon>Form_mark.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_student.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_student.Designer.cs">
+      <DependentUpon>Form_student.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_teacher_mark.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_teacher_mark.Designer.cs">
+      <DependentUpon>Form_teacher_mark.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_teacher_subject.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_teacher_subject.Designer.cs">
+      <DependentUpon>Form_teacher_subject.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Groups.cs" />
+    <Compile Include="Groups_REP.cs" />
+    <Compile Include="IRepository.cs" />
+    <Compile Include="Mark.cs" />
+    <Compile Include="Mark_REP.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Session.cs" />
+    <Compile Include="Student.cs" />
+    <Compile Include="Student_REP.cs" />
+    <Compile Include="Subject.cs" />
+    <Compile Include="Subject_REP.cs" />
+    <Compile Include="Teacher.cs" />
+    <Compile Include="Teacher_REP.cs" />
+    <Compile Include="VNZ.cs" />
+    <Compile Include="VNZ_REP.cs" />
+    <EmbeddedResource Include="Form_add_subject.resx">
+      <DependentUpon>Form_add_subject.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_admin_add.resx">
+      <DependentUpon>Form_admin_add.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_admin_edit.resx">
+      <DependentUpon>Form_admin_edit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_authorization.aa-DJ.resx">
+      <DependentUpon>Form_authorization.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_authorization.resx">
+      <DependentUpon>Form_authorization.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_admin_choice.resx">
+      <DependentUpon>Form_admin_choice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_mark.resx">
+      <DependentUpon>Form_mark.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_student.resx">
+      <DependentUpon>Form_student.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_teacher_mark.resx">
+      <DependentUpon>Form_teacher_mark.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_teacher_subject.resx">
+      <DependentUpon>Form_teacher_subject.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
